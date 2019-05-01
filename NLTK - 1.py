@@ -14,12 +14,14 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 example_text = "Hello, Mr. Brar, how are you and how is life? Today, it is sunshine. Let's go to the beach and enjoy."
 
-print(sent_tokenize(example_text))  ## Here, it is dividing by sentences
-print(word_tokenize(example_text))  ## Here, it is dividing by words, even considering the punctuation marks in-between the sentence.
+##print(sent_tokenize(example_text))  ## Here, it is dividing by sentences
+##print(word_tokenize(example_text))  ## Here, it is dividing by words, even considering the punctuation marks in-between the sentence.
 
+for i in word_tokenize(example_text):         ## It gives a division based on words, including (?,.' etc.)
+    print(i)
 
-
-
+for i in sent_tokenize(example_text):         ## It gives us division based on sentences. Here, we have 3 sentences.
+    print(i)
 
 
 
